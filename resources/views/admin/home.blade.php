@@ -1,5 +1,5 @@
 @extends('admin.layout')
 @section('content')
-halo
+Selamat Datang
 
 @endsection
