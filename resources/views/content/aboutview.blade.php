@@ -16,7 +16,7 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <ul>
-                            <li><i class="bi bi-chevron-right"></i> <strong>Address:</strong> <span>Jl.Setia Jaya X No.33-B
+                            <li><i class="bi bi-chevron-right"></i> <strong>Address:</strong> <span>Jelambar,Jakarta Barat
                                 </span></li>
                             <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong>
                                 <span>rafiimtiyaz4@gmail.com</span>
