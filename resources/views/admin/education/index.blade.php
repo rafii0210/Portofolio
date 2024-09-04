@@ -43,7 +43,7 @@
         </div>
     </div>
 @endsection
-@section('script-sweetalert')
+{{-- @section('script-sweetalert')
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {
             const deleteButtons = document.querySelectorAll('.delete-button');
@@ -106,4 +106,4 @@
             });
         });
     </script>
-@endsection
+@endsection --}}
