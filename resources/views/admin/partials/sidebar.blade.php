@@ -28,7 +28,7 @@
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="{{ route('profile.index') }}">Profile</a>
                 <a class="collapse-item" href="{{ route('experiences.index') }}">Experiences</a>
-                <a class="collapse-item" href="{{ route('education.index') }}">Education</a>
+                <a class="collapse-item" href="{{ route('educations.index') }}">Education</a>
                 <a class="collapse-item" href="{{ route('skill.index') }}">Skill</a>
             </div>
         </div>

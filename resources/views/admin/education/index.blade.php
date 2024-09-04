@@ -4,7 +4,7 @@
     <div class="card">
         <div class="card-header"></div>
         <div class="card-body">
-            <a class="btn btn-primary mb-2" href="{{ route('education.create') }}">ADD</a>
+            <a class="btn btn-primary mb-2" href="{{ route('educations.create') }}">ADD</a>
             {{-- <a class="btn btn-warning mb-2" href="{{ route('experiences.recycle') }}">Recycle</a> --}}
             <div class="table table-responsive">
                 <table class="table table-bordered text-center">
@@ -22,8 +22,8 @@
             <tr id="item-{{ $item->id }}">
               <td>{{ $index + 1 }}</td>
               <td>
-                <a href="{{ route('education.edit', $item->id) }}" class="btn btn-success btn-sm m-2">Edit</a>
-                <form action="{{ route('education.destroy', $item->id) }}" method="POST">
+                <a href="{{ route('educations.edit', $item->id) }}" class="btn btn-success btn-sm m-2">Edit</a>
+                <form action="{{ route('educations.destroy', $item->id) }}" method="POST">
                     @csrf
                     @method('DELETE')
                     <button type="submit" class="btn btn-danger btn-sm m-2">Delete</button>

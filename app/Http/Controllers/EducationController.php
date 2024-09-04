@@ -43,7 +43,7 @@ class EducationController extends Controller
             'tanggal_masuk'=>$request->tanggal_masuk,
             'tanggal_keluar'=>$request->tanggal_keluar
         ]);
-        return redirect()->route('education.index')->with('success', 'Education berhasil ditambah');
+        return redirect()->route('educations.index')->with('success', 'Education berhasil ditambah');
     }
 
     /**
@@ -83,7 +83,7 @@ class EducationController extends Controller
 
        $education->save();
 
-       return redirect()->route('education.index')->with('success', 'Edit Education berhasil');
+       return redirect()->route('educations.index')->with('success', 'Edit Education berhasil');
     }
 
     /**
@@ -93,6 +93,6 @@ class EducationController extends Controller
     {
         $education = Education::withTrashed()->findOrFail($id);
         $education->forceDelete();
-        return redirect()->route('education.index')->with('success', 'Data berhasil dihapus');
+        return redirect()->route('educations.index')->with('success', 'Data berhasil dihapus');
     }
 }

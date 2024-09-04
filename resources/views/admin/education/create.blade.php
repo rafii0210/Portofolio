@@ -4,7 +4,7 @@
     <div class="card">
     <div class="card-header"></div>
     <div class="card-body">
-        <form method="POST" action="{{ route('education.store') }}" enctype="multipart/form-data">
+        <form method="POST" action="{{ route('educations.store') }}" enctype="multipart/form-data">
             @csrf
             <div class="mb-3">
                 <label for="pendidikan">Pendidikan</label>

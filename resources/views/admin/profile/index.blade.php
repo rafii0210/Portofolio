@@ -15,6 +15,7 @@
               <th>Nama</th>
               <th>Email</th>
               <th>No Telpon</th>
+              <th>Gambar</th>
             </tr>
           </thead>
           <tbody>
@@ -36,6 +37,7 @@
               <td>{{ $item->nama_lengkap }}</td>
               <td>{{ $item->email }}</td>
               <td>{{ $item->no_telpon }}</td>
+              <td><img src="{{ asset('storage/image/' . $item->gambar) }} " width="10%"></td>
 
             </tr>
             @endforeach

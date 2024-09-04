@@ -10,10 +10,10 @@ Route::get('/', function () {
 });
 
 // Portofolio
-Route::get('dashboard/aboutview', [ContentController::class, 'aboutview']);
-Route::get('dashboard/resumeview', [ContentController::class, 'resume']);
-Route::get('dashboard/scholl', [ContentController::class, 'scholl']);
-Route::get('dashboard/profesional', [ContentController::class, 'profesional']);
+Route::get('profiles',[ContentController::class,'index'])->name('profiles');
+Route::get('experience',[ContentController::class,'experience'])->name('experience');
+Route::get('education',[ContentController::class,'education'])->name('education');
+Route::get('skills',[ContentController::class,'skill'])->name('skills');
 
 Route::get('login', [\App\Http\Controllers\LoginController::class, 'index'])->name('login');
 Route::post('action-login', [\App\Http\Controllers\LoginController::class, 'actionLogin'])->name('action-login');
@@ -28,7 +28,7 @@ Route::resource('profile', \App\Http\Controllers\ProfileController::class);
 Route::resource('experiences', \App\Http\Controllers\ExperiencesController::class);
 
 // pendidikan
-Route::resource('education', \App\Http\Controllers\EducationController::class);
+Route::resource('educations', \App\Http\Controllers\EducationController::class);
 
 // Skill
 Route::resource('skill', \App\Http\Controllers\SkillController::class);

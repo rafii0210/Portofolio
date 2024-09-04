@@ -2,79 +2,29 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use App\Models\Education;
+use App\Models\Profile;
+use App\Models\Skill;
+use App\Models\experiences;
 use Illuminate\Http\Request;
 
 class ContentController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function aboutview()
-    {
-        return view('content.aboutview');
+    public function index(){
+        $profile=Profile::first();
+        return view('portof.profile', compact('profile'));
     }
-
-    public function resume()
-    {
-        return view('content.resumeview');
+    public function experience(){
+        $experiences=Experiences::get();
+        return view('portof.experiences', compact('experiences'));
     }
-
-    public function scholl()
-    {
-        return view('content.scholl');
+    public function education(){
+        $educations=Education::get();
+        return view('portof.education', compact('educations'));
     }
-
-    public function profesional()
-    {
-        return view('content.profesional');
-    }
-
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
+    public function skill(){
+        $skills=Skill::get();
+        return view('portof.skill',compact('skills'));
     }
 }
