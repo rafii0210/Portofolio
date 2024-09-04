@@ -93,6 +93,14 @@ class ProfileController extends Controller
     public function update(Request $request, string $id)
     {
         $profile = Profile::find($id);
+        $request->validate([
+            'picture'=>'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'nama_lengkap'=>'required|string',
+            'no_telpon'=>'required|numeric',
+            'email'=>'required|email',
+            'description'=>'nullable|string',
+            'alamat'=>'nullable|string',
+        ]);
     // Simpan gambar jika ada yang diupload
         if ($request->hasFile('gambar')) {
             // Hapus gambar lama jika ada
@@ -112,7 +120,6 @@ class ProfileController extends Controller
         $profile->email = $request->email;
         $profile->description = $request->description;
         $profile->alamat = $request->alamat;
-        $profile->gambar = $name;
 
         $profile->save();
 
