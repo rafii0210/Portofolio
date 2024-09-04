@@ -19,8 +19,7 @@
                                 <li>Mencetak Surat Tagihan Pajak</li>
                             </ul>
                         </div>
-
-
-
+                    </div>
+                </div>
             </div>
 @endsection

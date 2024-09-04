@@ -23,7 +23,8 @@
                             </li>
                             <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+628811225926
                                     </span></li>
-
-
-    </div>
+                     </div>
+                </div>
+            </div>
+        </div>
 @endsection
